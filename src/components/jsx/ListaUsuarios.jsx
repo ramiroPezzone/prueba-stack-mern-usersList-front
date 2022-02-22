@@ -7,13 +7,13 @@ const ListaUsuarios = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await axios.get("https://prueba-stack-mern-userslist.herokuapp.com/api/usuarios");
+      const res = await axios.get("https://prueba-stack-mern-back.herokuapp.com/api/usuarios");
       setLista(res.data);
     })();
   }, [lista]);
 
   const delUser = async (id) => {
-    await axios.delete("https://prueba-stack-mern-userslist.herokuapp.com/api/usuarios/" + id);
+    await axios.delete("https://prueba-stack-mern-back.herokuapp.com/api/usuarios/" + id);
   };
 
   return (

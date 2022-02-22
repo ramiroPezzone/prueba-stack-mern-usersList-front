@@ -30,7 +30,7 @@ const CrearUsuarios = () => {
       correo: usuario.correo,
     };
 
-    await axios.post("https://prueba-stack-mern-userslist.herokuapp.com/api/usuarios", newUser);
+    await axios.post("https://prueba-stack-mern-back.herokuapp.com/api/usuarios", newUser);
 
     setUsuario({ ...valorInicial });
   };

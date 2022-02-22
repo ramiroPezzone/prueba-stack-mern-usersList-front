@@ -31,7 +31,7 @@ const EditarUsuario = () => {
       telefono: usuario.telefono,
       correo: usuario.correo,
     };
-    await axios.put("https://prueba-stack-mern-userslist.herokuapp.com/api/usuarios/" + subId, dataUpdated);
+    await axios.put("https://prueba-stack-mern-back.herokuapp.com/api/usuarios/" + subId, dataUpdated);
     setUsuario({ ...valorInicial });
     setSubId("");
   };
@@ -40,7 +40,7 @@ const EditarUsuario = () => {
 
   const editarUser = async (valorId) => {
     const res = await axios.get(
-      "https://prueba-stack-mern-userslist.herokuapp.com/api/usuarios/" + valorId
+      "https://prueba-stack-mern-back.herokuapp.com/api/usuarios/" + valorId
     );
     setUsuario({
       nombre: res.data.nombre,
